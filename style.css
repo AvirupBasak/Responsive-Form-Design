@@ -148,8 +148,8 @@ input::-webkit-inner-spin-button{
     }
 }
 
-/* Tablet / small laptop (601px — 900px) */
-@media (min-width: 601px) and (max-width: 900px) {
+ /* Tablet / small laptop (601px — 900px) */
+/*@media (min-width: 601px) and (max-width: 900px) {
     .center{
         width: 80vw;
         max-width: 520px;
@@ -164,7 +164,7 @@ input::-webkit-inner-spin-button{
     .input-field{
         font-size: 0.95rem;
     }
-}
+} */
 
 /* Phones (<=600px) — stacked, touch-friendly */
 @media (max-width: 600px) {
@@ -212,7 +212,7 @@ input::-webkit-inner-spin-button{
 }
 
 /* Extra small phones (<=380px) — tighten spacing */
-@media (max-width: 380px) {
+/* @media (max-width: 380px) {
     .center{
         padding: 12px;
         border-radius: 12px;
@@ -231,4 +231,5 @@ input::-webkit-inner-spin-button{
     .button1{
         margin-right: 40px;
     }
-}
+
+} */
