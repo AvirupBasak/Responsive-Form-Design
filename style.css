@@ -1,0 +1,234 @@
+*{
+    padding: 0%;
+    margin: 0%;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;;
+}
+.center{
+    height: auto;
+    width: 100vh;
+    max-width: 520px; 
+    padding: 30px;
+    display:grid;/*check here if problem occurs on form fix it with disply->grid*/
+    margin: auto;
+    place-items: center;
+    /* flex-direction: column; */
+    border-radius: 25px;
+    background: rgba(0,0,0,0.8);
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.9);
+    border: none;
+    transition: .35s ease-in-out;
+    box-sizing: border-box; /* include padding in width/height calculations */
+}
+.heading{
+    margin: 2em;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    font-size: 1.5em;
+}
+.form{
+    width: 65%;
+    max-width: 480px;
+    margin: 1em;
+    padding: 28px;
+    height: auto;
+    background-color: rgba(255, 255, 255, 0.695);
+    border-radius: 12px;
+    box-sizing: border-box;
+}
+input{
+    margin-bottom: 15.9px;
+}
+button{
+    margin: 5px;
+    margin-top: 5px;
+}
+.button1{
+    margin-left: 20px;
+    margin-right: 52px;
+    color: whitesmoke;
+    position: relative;
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.1);
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    height: 40px;
+    width: 70px;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+.button2{
+    color: whitesmoke;
+    position: relative;
+    background: rgba(0,0,0,0.7);
+    box-shadow: 0 0 20px 2px rgba(0,0,0,0.1);
+    cursor: pointer;
+    border: none;
+    height: 40px;
+    width: 70px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: .3s ease-in-out;
+}
+.button1:hover{
+    transform: scale(1.09);
+}
+.button2:hover{
+    transform: scale(1.09);
+}
+.input-field{
+    padding: 1px;
+    text-align: center;
+    position: relative;
+    background: none;
+    border: none;
+    outline: none;
+    width: 100%;
+    background-color: rgb(242, 245, 245);
+}
+.input-field:hover{
+    transform: scale(1.06);
+    cursor: pointer;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+    margin: 0;
+}
+.success-message{
+    background-color: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 5px;
+    margin-top: 20px;
+    padding: 15px;
+    display: none;
+}
+/* --- Responsive media queries (drop-in) --- */
+
+/* Large screens / desktop (1201px and up) */
+ /* @media (min-width: 1201px) {
+    .center{
+        width: 50vw;           
+        max-width: 640px;
+        padding: 32px;
+    }
+    .heading{
+        font-size: 1.6rem;
+    }
+    .form{
+        padding: 40px;
+    }
+    .input-field{
+        font-size: 1rem;
+    }
+} */
+
+/* Desktop / laptop (901px — 1200px) */
+@media (min-width: 901px) and (max-width: 1200px) {
+    .center{
+        width: 60vw;
+        max-width: 640px;
+        padding: 32px;
+    }
+    .heading{
+        font-size: 1.6rem;
+    }
+    .button1, .button2{
+        width: 98px;
+        height: 40px;
+    }
+}
+
+/* Tablet / small laptop (601px — 900px) */
+@media (min-width: 601px) and (max-width: 900px) {
+    .center{
+        width: 80vw;
+        max-width: 520px;
+        padding: 26px;
+    }
+    .heading{
+        font-size: 1.4rem;
+    }
+    .form{
+        padding: 28px;
+    }
+    .input-field{
+        font-size: 0.95rem;
+    }
+}
+
+/* Phones (<=600px) — stacked, touch-friendly */
+@media (max-width: 600px) {
+    .center{
+        width: 94vw;           /* near-full width on small phones */
+        max-width: 420px;
+        padding: 18px;
+        border-radius: 16px;
+    }
+
+    .heading{
+        margin: 1em 0.2em;
+        font-size: 1.2rem;
+    }
+
+    .form{
+        margin-left: 10px;
+        padding: 18px;
+        height: auto;
+        width: 36vh;
+        border-radius: 10px;
+    }
+
+    .input-field{
+        width: 100%;
+        font-size: 0.95rem;
+    }
+
+    /* make buttons larger and easier to tap */
+    .button1, .button2 {
+        width: 88px;
+        height: 44px;
+        padding: 8px;
+        margin: 6px 6px;
+        font-size: 0.95rem;
+    }
+    .button1{
+        margin-right: 88px;
+    }
+
+    /* stack buttons vertically if space gets tight */
+    .button1, .button2{
+        display: inline-block;
+    }
+}
+
+/* Extra small phones (<=380px) — tighten spacing */
+@media (max-width: 380px) {
+    .center{
+        padding: 12px;
+        border-radius: 12px;
+    }
+    .heading{
+        font-size: 1.05rem;
+    }
+    .form{
+        padding: 12px;
+    }
+    .button1, .button2 {
+        width: 76px;
+        height: 40px;
+        font-size: 0.9rem;
+    }
+    .button1{
+        margin-right: 40px;
+    }
+}

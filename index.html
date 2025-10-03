@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Information Form</title>
+</head>
+<body>
+    <div class="center">
+        <p class="heading">FORM</p>
+        <form action="" id="form" class="form">
+            Name:<input type="text" placeholder="Enter the name here" class="input-field" required><br>
+            Roll:<input type="number" placeholder="Enter the roll here" pattern="^[0-9]{10}$" class="input-field" required><br>
+            Stream:<input type="text" placeholder="Enter the Stream here" class="input-field" required><br>
+            Mobile:<input type="tel" inputmode="numeric" pattern="^\+91[0-9]{10}$" placeholder="Enter the Mobile here" id="phone" class="input-field" required><br>
+            Email:<input type="text" placeholder="Enter the Email here" class="input-field" required><br>
+            <button type="submit" class="button1">SUBMIT</button>
+            <button type="reset" class="button2">CLEAR</button>
+        </form>
+        <div id="successMessage" class="success-message">
+            You Submitted the Form Successfully!!
+        </div> 
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function(){
+            const phoneInput = document.getElementById('phone');
+
+            phoneInput.addEventListener('focus', function(){
+                if(!this.value.startsWith('+91')){
+                    this.value = '+91'+this.value;
+                }
+            });
+            phoneInput.addEventListener('blur', function(){
+                if(!this.value.startsWith('+91')){
+                    this.value = '+91';
+                }
+            });
+        });
+        //success alert!!!
+        const form = document.getElementById('form');
+        const successMessage = document.getElementById('successMessage');
+
+        form.addEventListener('submit', function(event){
+            event.preventDefault();
+
+            console.log('Form submission intercepted. Showing success Message.');
+
+            form.style.display = 'none';
+
+            document.querySelector('.center').style.height = '250px';
+
+            successMessage.style.display = 'block';
+        });
+    </script>
+</body>
+</html>
